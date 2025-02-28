@@ -4,11 +4,13 @@ import {
   Route
 } from "react-router-dom"
 
+import LoginPage from "components/pages/LoginPage"
+
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<div>Login Page</div>} />
+        <Route path="/" element={<LoginPage />} />
       </Routes>
     </Router>
   )

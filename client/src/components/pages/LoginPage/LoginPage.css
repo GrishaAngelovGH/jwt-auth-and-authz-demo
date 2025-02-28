@@ -1,0 +1,42 @@
+.page {
+  background: #e3e3e3;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  background: #fff;
+  
+  border: 2px solid darkslategray;
+  border-radius: 5px;
+  
+  width: 40rem;
+  height: 15rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+form label {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-control {
+  font-size: 20px;
+  outline: none;
+  border: 2px solid #1e90ff;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+button[type="submit"] {
+  background: #1e90ff;
+  color: #fff;
+}
