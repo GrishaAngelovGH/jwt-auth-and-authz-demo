@@ -1,6 +1,16 @@
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route
+} from "react-router-dom"
+
 function App() {
   return (
-    <div>App</div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<div>Login Page</div>} />
+      </Routes>
+    </Router>
   )
 }
 
