@@ -7,6 +7,8 @@ import {
 import LoginPage from "components/pages/LoginPage"
 import HomePage from "components/pages/HomePage/HomePage"
 
+import PrivateRoute from "components/PrivateRoute"
+
 import AuthProvider from "context/AuthProvider"
 
 function App() {
@@ -15,7 +17,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<LoginPage />} />
-          <Route path="/home" element={<HomePage />} />
+          <Route path="/home" element={<PrivateRoute><HomePage /></PrivateRoute>} />
         </Routes>
       </Router>
     </AuthProvider>
