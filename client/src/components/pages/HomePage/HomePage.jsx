@@ -1,5 +1,5 @@
 import { useContext } from "react"
-import { useNavigate } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 
 import AuthContext from "context/AuthContext"
 
@@ -24,6 +24,8 @@ const HomePage = () => {
 
       <div className="buttons">
         <button className="logout-btn" onClick={handleLogout}>Log Out</button>
+
+        <Link to="/actions">View Actions</Link>
       </div>
     </div>
   )
