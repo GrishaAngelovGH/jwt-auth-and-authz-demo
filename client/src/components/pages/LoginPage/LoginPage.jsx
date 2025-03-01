@@ -1,10 +1,16 @@
-import { useState } from "react"
+import { useState, useContext } from "react"
+import { useNavigate } from "react-router-dom"
+
+import AuthContext from "context/AuthContext"
 
 import "./LoginPage.css"
 
 const LoginPage = () => {
   const [email, setEmail] = useState("user@example.com")
   const [password, setPassword] = useState("password123")
+
+  const navigate = useNavigate()
+  const { login } = useContext(AuthContext)
 
   const handleSubmitForm = async e => {
     e.preventDefault()
@@ -35,7 +41,10 @@ const LoginPage = () => {
       })
 
       if (response.ok) {
-        alert("Successful Login!")
+        const { token } = await response.json()
+
+        login(token)
+        navigate("/home")
       } else {
         /*
           When a client receives a 401 Unauthorized response, the catch block is typically called 
