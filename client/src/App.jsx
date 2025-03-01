@@ -7,14 +7,18 @@ import {
 import LoginPage from "components/pages/LoginPage"
 import HomePage from "components/pages/HomePage/HomePage"
 
+import AuthProvider from "context/AuthProvider"
+
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<LoginPage />} />
-        <Route path="/home" element={<HomePage />} />
-      </Routes>
-    </Router>
+    <AuthProvider>
+      <Router>
+        <Routes>
+          <Route path="/" element={<LoginPage />} />
+          <Route path="/home" element={<HomePage />} />
+        </Routes>
+      </Router>
+    </AuthProvider>
   )
 }
 
